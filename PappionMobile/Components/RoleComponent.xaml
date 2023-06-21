@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PappionMobile.Components.RoleComponent">
+    <StackLayout HorizontalOptions="Start">
+        <Label  FontFamily="Gilroy" 
+                Text="Виберіть бажану роль:"
+                FontSize="16" 
+                TextColor="#282E6A"
+                FontAttributes="Bold"/>
+        
+        <Border Background="White" 
+                BackgroundColor="White" 
+                StrokeThickness="2"
+                Stroke="#282E6A" 
+                StrokeShape="RoundRectangle 5" 
+                StrokeLineCap="Flat" 
+                HeightRequest="44"
+                WidthRequest="295">
+            <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="Center">
+                <Label Margin="16,0,0,0" 
+                       FontFamily="Gilroy" 
+                       Text="Користувач" 
+                       HorizontalTextAlignment="Center" 
+                       VerticalTextAlignment="Center" 
+                       FontSize="16" 
+                       TextColor="#282E6A"
+                       FontAttributes="Bold"/>
+                
+                <Switch IsToggled="false" OnColor="#282E6A" ThumbColor="#282E6A" HeightRequest="300"/>
+                
+                <Label FontFamily="Gilroy"
+                       Margin="0,0,16,0"
+                       Text="Резидент" 
+                       HorizontalTextAlignment="Center" 
+                       VerticalTextAlignment="Center" 
+                       FontSize="16" 
+                       TextColor="#282E6A"
+                       FontAttributes="Bold"/>
+            </StackLayout>
+            
+        </Border>
+        
+    </StackLayout>
+</ContentView>

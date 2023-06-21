@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PappionMobile.Components.ImageAboutComponent"
+             xmlns:local = "clr-namespace:PappionMobile.Components">
+    
+    <StackLayout Spacing="20">
+        <StackLayout>
+            <ImageButton HeightRequest="150" WidthRequest="150" Source="add_photo.png"/>
+            <Label FontFamily="Gilroy" 
+                       Text="Додати фото" 
+                       HorizontalTextAlignment="Center"
+                       FontSize="15" 
+                       TextColor="#282E6A"
+                       FontAttributes="Bold"/>
+        </StackLayout>
+        <StackLayout>
+            <Label FontFamily="Gilroy" 
+                       Text="Добавте кілька тегів послуг, які ви надаєте" 
+                       HorizontalTextAlignment="Center"
+                       FontSize="15" 
+                       TextColor="#282E6A"
+                       FontAttributes="Bold"/>
+
+            <Border Background="White" 
+                BackgroundColor="White" 
+                StrokeThickness="2"
+                Stroke="#282E6A" 
+                StrokeShape="RoundRectangle 5" 
+                StrokeLineCap="Flat" 
+                MinimumHeightRequest="44"
+                WidthRequest="295">
+                <FlexLayout AlignItems="Start" Direction="Row"  VerticalOptions="Center" Wrap="Wrap">
+                    <local:NewTagComponent/>
+                    <local:NewTagComponent/>
+                    <local:NewTagComponent/>
+                </FlexLayout>
+            </Border>
+        </StackLayout>
+
+        <StackLayout>
+            <Label FontFamily="Gilroy" 
+                       Text="Добавте опис роду діяльності" 
+                       HorizontalTextAlignment="Center"
+                       FontSize="15" 
+                       TextColor="#282E6A"
+                       FontAttributes="Bold"/>
+            <Editor MinimumWidthRequest="295" Background="#CDCDCD" TextColor="#282E6A" FontFamily="Gilroy" MinimumHeightRequest="153"/>
+        </StackLayout>
+    </StackLayout>
+</ContentView>
+    

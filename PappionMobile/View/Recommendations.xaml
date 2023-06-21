@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local = "clr-namespace:PappionMobile.Components"
+             x:Class="PappionMobile.View.Recommendations"
+             Title="Recommendations" BackgroundColor="White" >
+    <Grid>
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" HorizontalOptions="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Style="{StaticResource FilledBtnStyle}" HorizontalOptions="Center" WidthRequest="120"  Text="Події" FontSize="14" HeightRequest="45" BackgroundColor="#282E6A" Margin="2, 20, 2, 2"/>
+                <Button Grid.Column="1" Style="{StaticResource EmptyBtnStyle}" HorizontalOptions="Center" WidthRequest="120" Text="Публікації" TextColor="#282E6A" HeightRequest="45" FontSize="14" Margin="2, 20, 2, 2"/>
+            </Grid>
+                <ImageButton Clicked="Button_Clicked" Grid.Row="1" HeightRequest="30" WidthRequest="30" VerticalOptions="Center" HorizontalOptions="Start" Margin="5, 0, 0, 0" Source="back_arrow.png"/>
+            <local:PostControl Grid.Row="2"/>
+        </Grid>
+    </ScrollView>
+        <StackLayout VerticalOptions="EndAndExpand">
+            <local:NavBarComponent/>
+        </StackLayout>
+    </Grid>
+</ContentPage>

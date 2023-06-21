@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PappionMobile.Components.NewTagComponent"
+             >
+    <Border     
+        BackgroundColor="#E6E6E6"
+        StrokeShape="RoundRectangle 5"
+        HeightRequest="17"
+        WidthRequest="67">
+        <StackLayout Orientation="Horizontal" Spacing="4">
+            <ImageButton Source="add_tag.png" WidthRequest="8" HeightRequest="8"/>
+            <Label  Text="Сноуборд" TextColor="#282E6A" FontSize="10" FontFamily="Gilroy"/>
+        </StackLayout>
+    </Border>
+</ContentView>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local = "clr-namespace:PappionMobile.Components"
+             x:Class="PappionMobile.View.MainPage"
+             Title="MainPage">
+    <Grid>
+        <ScrollView>
+    <Grid HorizontalOptions="Start">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" FontSize="16" FontAttributes="Bold" FontFamily="Gilroy"  Text="Що нового?" HorizontalOptions="Start"/>
+        <StackLayout Grid.Row="1" Margin="5" HorizontalOptions="Start" MinimumHeightRequest="100">
+                    <Label LineBreakMode="WordWrap" Text="Туй будуть новості якісь які будуть косатися змін в програмі і якигось подій десь на якигось курортах" FontSize="13" FontFamily="Gilroy"/>
+                </StackLayout>
+        <Label Grid.Row="2" FontSize="16" FontAttributes="Bold" FontFamily="Gilroy"  Text="Варіанти відпочинку по обраним тегам:" HorizontalOptions="Start"/>
+        <StackLayout Grid.Row="3" Orientation="Horizontal" Margin="5" HorizontalOptions="Start" Spacing="5">
+            <local:NewTagComponent/>
+            <local:NewTagComponent/>
+            <local:NewTagComponent/>
+        </StackLayout>
+        <FlexLayout Grid.Row="4">
+            <local:MiniProfileComponent/>
+        </FlexLayout>
+    </Grid>
+    </ScrollView>
+        <StackLayout VerticalOptions="EndAndExpand">
+            <local:NavBarComponent/>
+        </StackLayout>
+    </Grid>
+</ContentPage>

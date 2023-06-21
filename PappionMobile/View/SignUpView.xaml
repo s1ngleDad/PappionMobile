@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PappionMobile.View.SignUpView"
+             xmlns:local = "clr-namespace:PappionMobile.Components"
+             Title="SignUpView">
+    <StackLayout Spacing="20">
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Padding="0, 16, 0, 0">
+            <ImageButton Source="back_arrow.png" HeightRequest="26" WidthRequest="26"  Margin="16, 0, 0, 0" Aspect="AspectFill"/>
+        </StackLayout>
+        <Label FontFamily="Gilroy" 
+                       Text="Sign Up" 
+                       HorizontalTextAlignment="Start" 
+                       Margin="45, 0, 0, 0"
+                       VerticalTextAlignment="Center" 
+                       FontSize="36" 
+                       TextColor="Black"
+                       FontAttributes="Bold"/>
+        <ContentView x:Name="ConView" Margin="0, 54, 0, 0" HorizontalOptions="Center">
+            <local:RoleComponent/>
+        </ContentView>
+        <Button Style="{StaticResource FilledBtnStyle}" HorizontalOptions="Center" Text="Далі" WidthRequest="295" HeightRequest="44" BackgroundColor="#282E6A" Clicked="Button_Clicked"/>
+    </StackLayout>
+</ContentPage>

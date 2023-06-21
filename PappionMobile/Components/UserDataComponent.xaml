@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PappionMobile.Components.UserDataComponent">
+    <StackLayout HorizontalOptions="Start" Spacing="20">
+        <Entry TextColor="#282E6A" HeightRequest="44" WidthRequest="295" Placeholder="Номер телефону*" BackgroundColor="#F5f5f5" FontFamily="Gilroy"/>
+        <Entry TextColor="#282E6A" HeightRequest="44" WidthRequest="295" Placeholder="Електронна пошта*" BackgroundColor="#F5f5f5" FontFamily="Gilroy"/>
+        <Entry TextColor="#282E6A" HeightRequest="44" WidthRequest="295" Placeholder="ПІБ*" BackgroundColor="#F5f5f5" FontFamily="Gilroy"/>
+        <Entry TextColor="#282E6A" HeightRequest="44" WidthRequest="295" Placeholder="Пароль*" BackgroundColor="#F5f5f5" FontFamily="Gilroy" IsPassword="True"/>
+    </StackLayout>
+</ContentView>

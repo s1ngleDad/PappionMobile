@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PappionMobile.View.EditProfile"
+             xmlns:local = "clr-namespace:PappionMobile.Components"
+             Title="EditProfile">
+    <StackLayout Spacing="20">
+        <Grid BackgroundColor="#e6e6e6" HeightRequest="57">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <ImageButton HorizontalOptions="Start" Grid.Column="0" Margin="10, 0, 0, 0" Aspect="AspectFit"  HeightRequest="30" WidthRequest="40" Source="exit_btn.png"/>
+            <Label Grid.Column="1" 
+                   FontFamily="Gilroy" 
+                   Text="Мій профіль" 
+                   HorizontalTextAlignment="Center" 
+                   VerticalTextAlignment="Center" 
+                   FontSize="32" 
+                   TextColor="#282E6A"/>
+        </Grid>
+        <StackLayout>
+            <ImageButton BackgroundColor="Transparent"
+             BorderWidth="0"
+             CornerRadius="70"
+             WidthRequest="150"
+             HeightRequest="150"
+             Source="user_pick.png"/>
+            <Label Grid.Column="1" 
+                   FontFamily="Gilroy" 
+                   Text="Натисніть щоб змінити&#xA;фотографію" 
+                   HorizontalTextAlignment="Center" 
+                   VerticalTextAlignment="Center" 
+                   FontSize="16" 
+                   TextColor="#282E6A"
+                   FontAttributes="Bold"/>
+        </StackLayout>
+        <StackLayout Spacing="20">
+            <Entry TextColor="#282E6A" HeightRequest="44" WidthRequest="295" Text="Чавок Дівад Ценитрук" BackgroundColor="#F5f5f5" FontFamily="Gilroy"/>
+            <Entry TextColor="#282E6A" HeightRequest="44" WidthRequest="295" Text="+380687654634" BackgroundColor="#F5f5f5" FontFamily="Gilroy"/>
+            <Entry TextColor="#282E6A" HeightRequest="44" WidthRequest="295" Text="kcidkcuskram@ukr.net" BackgroundColor="#F5f5f5" FontFamily="Gilroy"/>
+            <Entry TextColor="#282E6A" HeightRequest="44" WidthRequest="295" Text="Номер телефону*" BackgroundColor="#F5f5f5" FontFamily="Gilroy"/>
+        </StackLayout>
+        
+        <StackLayout>
+            <Label FontFamily="Gilroy" 
+                       Text="Змінити теги:" 
+                       HorizontalTextAlignment="Center"
+                       FontSize="15" 
+                       TextColor="#282E6A"
+                       FontAttributes="Bold"/>
+
+            <Border Background="White" 
+                BackgroundColor="White" 
+                StrokeThickness="2"
+                Stroke="#282E6A" 
+                StrokeShape="RoundRectangle 5" 
+                StrokeLineCap="Flat" 
+                MinimumHeightRequest="44"
+                WidthRequest="295">
+                <FlexLayout AlignItems="Start" Direction="Row"  VerticalOptions="Center" Wrap="Wrap">
+                    <local:NewTagComponent/>
+                    <local:NewTagComponent/>
+                    <local:NewTagComponent/>
+                </FlexLayout>
+            </Border>
+        </StackLayout>
+        <Button Style="{StaticResource FilledBtnStyle}" Margin="20" HorizontalOptions="Center" Text="ОК" WidthRequest="195" HeightRequest="44" BackgroundColor="#282E6A" Clicked="Button_Clicked"/>
+        <StackLayout VerticalOptions="EndAndExpand">
+            <local:NavBarComponent/>
+        </StackLayout>
+    </StackLayout>
+
+    
+</ContentPage>

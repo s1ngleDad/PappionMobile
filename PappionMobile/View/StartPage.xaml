@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local = "clr-namespace:PappionMobile.Components"
+             x:Class="PappionMobile.View.StartPage"
+             Title="StartPage" BackgroundImageSource="start_background.png">
+    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+            <Label FontFamily="Gilroy" 
+                       Text="Pappion" 
+                       HorizontalTextAlignment="Center" 
+                       VerticalTextAlignment="Center" 
+                       FontSize="48" 
+                       TextColor="#1A3143"/>
+            <Label FontFamily="Gilroy" 
+                       Text="Створи відпустку мрії&#xA;за декілька кліків" 
+                       HorizontalTextAlignment="Center" 
+                       VerticalTextAlignment="Center" 
+                       FontSize="16" 
+                       TextColor="#1A3143"
+                       FontAttributes="Bold"/>
+        </StackLayout>
+        <StackLayout VerticalOptions="End">
+            <local:AuthorizationComponent/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
