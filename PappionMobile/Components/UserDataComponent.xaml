@@ -3,9 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PappionMobile.Components.UserDataComponent">
     <StackLayout HorizontalOptions="Start" Spacing="20">
-        <Entry TextColor="#282E6A" HeightRequest="44" WidthRequest="295" Placeholder="Номер телефону*" BackgroundColor="#F5f5f5" FontFamily="Gilroy"/>
-        <Entry TextColor="#282E6A" HeightRequest="44" WidthRequest="295" Placeholder="Електронна пошта*" BackgroundColor="#F5f5f5" FontFamily="Gilroy"/>
-        <Entry TextColor="#282E6A" HeightRequest="44" WidthRequest="295" Placeholder="ПІБ*" BackgroundColor="#F5f5f5" FontFamily="Gilroy"/>
-        <Entry TextColor="#282E6A" HeightRequest="44" WidthRequest="295" Placeholder="Пароль*" BackgroundColor="#F5f5f5" FontFamily="Gilroy" IsPassword="True"/>
+
+        <Entry TextColor="#282E6A" HeightRequest="44" WidthRequest="295" x:Name="FirstPhoneNumber" Placeholder="Номер телефону*" BackgroundColor="#F5f5f5" FontFamily="Gilroy"/>
+        <Entry TextColor="#282E6A" HeightRequest="44" WidthRequest="295" x:Name="SecondPhoneNumber" Placeholder="Другий номер телефону*" BackgroundColor="#F5f5f5" FontFamily="Gilroy"/>
+        <Entry TextColor="#282E6A" HeightRequest="44" WidthRequest="295" x:Name="Gmail" Placeholder="Електронна пошта*" BackgroundColor="#F5f5f5" FontFamily="Gilroy"/>
+        <Entry TextColor="#282E6A" HeightRequest="44" WidthRequest="295" x:Name="FirstName" Placeholder="Ім`я*" BackgroundColor="#F5f5f5" FontFamily="Gilroy"/>
+        <Entry TextColor="#282E6A" HeightRequest="44" WidthRequest="295" x:Name="LastName" Placeholder="Прізвище*" BackgroundColor="#F5f5f5" FontFamily="Gilroy"/>
+        <Entry TextColor="#282E6A" HeightRequest="44" WidthRequest="295" x:Name="Password" Placeholder="Пароль*" BackgroundColor="#F5f5f5" FontFamily="Gilroy" IsPassword="True"/>
+        <Entry TextColor="#282E6A" HeightRequest="44" WidthRequest="295" x:Name="ConfirmPassword" Placeholder=" Підтвердіть пароль*" BackgroundColor="#F5f5f5" FontFamily="Gilroy" IsPassword="True"/>
     </StackLayout>
 </ContentView>

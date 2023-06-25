@@ -11,7 +11,7 @@ namespace PappionMobile.Endpoints.PappionBackend
 {
     public class UserEndpoint
     {
-        private const string usersUrl = "http://localhost:8001/api/User";
+        private const string usersUrl = "https://pappionapi.loca.lt/api/Users";
 
         public async Task<List<UserModel>> GetAsync()
         {
@@ -73,6 +73,31 @@ namespace PappionMobile.Endpoints.PappionBackend
             request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             var response = await client.SendAsync(request);
             response.EnsureSuccessStatusCode();
+        }
+
+        public async Task<UserModel> RegisterAsync(RegisterModel model)
+        {
+            var json = JsonConvert.SerializeObject(model);
+            var data = new StringContent(json, Encoding.UTF8, "application/json");
+
+            using var client = new HttpClient();
+
+            var response = await client.PostAsync($"{usersUrl}/register", data);
+            var result = await response.Content.ReadAsStringAsync();
+            UserModel post = JsonConvert.DeserializeObject<UserModel>(result.ToString());
+            return post;
+        }
+        public async Task<UserModel> LoginAsync(LoginModel model)
+        {
+            var json = JsonConvert.SerializeObject(model);
+            var data = new StringContent(json, Encoding.UTF8, "application/json");
+
+            using var client = new HttpClient();
+
+            var response = await client.PostAsync($"{usersUrl}/login", data);
+            var result = await response.Content.ReadAsStringAsync();
+            UserModel post = JsonConvert.DeserializeObject<UserModel>(result.ToString());
+            return post;
         }
     }
 }

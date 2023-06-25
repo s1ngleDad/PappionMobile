@@ -13,11 +13,21 @@ public partial class UserDataComponent : ContentView
         InitializeComponent();
         //звязка змінних з .xaml
         this.BindingContext = this;
+    }
+    private async Task RegisterAsync()
+    {
+        RegisterModel registerModel = new RegisterModel();
+        registerModel.firstName = FirstName.Text;
+        registerModel.lastName = LastName.Text;
+        registerModel.email = Gmail.Text;
+        registerModel.phoneNumber = FirstPhoneNumber.Text;
+        registerModel.phoneNumber2 = SecondPhoneNumber.Text;
+        registerModel.password = Password.Text;
+        registerModel.passwordConfirmation = ConfirmPassword.Text;
 
-        //виклик методу
-        //GetUserModels();
+        await userEndpoint.RegisterAsync(registerModel);
     }
 
 
- 
+
 }

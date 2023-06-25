@@ -11,13 +11,13 @@ namespace PappionMobile.Endpoints.Services
 {
     public class PostEndpoint
    {
-        private const string postsUrl = "http://localhost:8001/api/Post"; 
+        private const string postsUrl = "https://pappionapi.loca.lt/api/Posts"; 
 
         public async Task<List<PostModel>> GetAsync()
         {
             HttpClient client = new HttpClient();
             HttpResponseMessage response = await client
-                .GetAsync($"{postsUrl}/GetAll");
+                .GetAsync($"{postsUrl}");
             var responseBody = await response.Content.ReadAsStringAsync();
             var result = JsonConvert.DeserializeObject(responseBody);
 
